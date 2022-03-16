@@ -1,17 +1,18 @@
 import memedata from "../memedata"
 import { Icon } from '@iconify/react';
+import { useState } from "react";
 
 
 
 export default function Meme(){
    
-    let randomImg
+    const [memeImg , setMemeImg] = useState("https://i.imgflip.com/3si4.jpg")
     function getMemeImg(){
-        console.log("clicked");
+        
         const memesArray = memedata.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length);
-        randomImg = memesArray[randomNumber].url
-        console.log(randomImg);    
+        setMemeImg( memesArray[randomNumber].url)
+           
     }
 
 
@@ -33,10 +34,10 @@ export default function Meme(){
           </div>
             <button
             onClick={getMemeImg} 
-            className="form__btn">Get a new meme image 
+            className="form__btn">New meme image 
             <Icon icon="clarity:picture-solid-badged" className='iconify'/></button>
         </div>
-            <img src={randomImg} alt="meme"></img>
+            <img src={memeImg} alt="meme" className="memeImg"></img>
     </div>
     )
 }

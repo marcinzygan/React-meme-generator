@@ -49,7 +49,7 @@ img{
   font-size: 0.75rem;
 }
 .meme__container{
-  height: calc(100vh - 4rem);
+  max-height: calc(100vh - 4rem);
   padding: 4rem 2.5rem 4rem 2.5rem;
 }
 .form{
@@ -60,21 +60,22 @@ img{
   gap: 1rem;
 }
 .input{
-  width: 14rem;
+  display: flex;
+  width: 16rem;
   height: 2rem;
   border: 1px solid #D5D4D8;
   border-radius: 5px;
-  margin: 0 1rem 0 1rem;
   padding: 1rem;
 }
 .form__btn{
+  cursor: pointer;
   background-image: var(--bck-image);
   color: rgb(8, 8, 8);
   font-family: var(--ff-primary);
   font-weight: 700;
   font-size: 1rem;
   height: 2.5rem;
-  width: 30rem;
+  width: 16rem;
   border: none;
   border: 1px solid #D5D4D8;
   border-radius: 5px;
@@ -84,8 +85,22 @@ img{
   justify-content: center;
   gap: 0.5rem;
 }
+.form__btn:hover{
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
 .iconify{
   height: 25px;
   width: 40px;
   color: rgb(255, 255, 255);
+}
+
+.memeImg{
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 30rem;
+  max-width: 100%;
+  object-fit: contain;
 }
