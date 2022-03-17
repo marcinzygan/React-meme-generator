@@ -6,12 +6,27 @@ import { useState } from "react";
 
 export default function Meme(){
    
-    const [memeImg , setMemeImg] = useState("https://i.imgflip.com/3si4.jpg")
+    // const [memeImg , setMemeImg] = useState("https://i.imgflip.com/3si4.jpg")
+    const [meme , setMeme] = useState ({
+        topText:"",
+        bottomText:"",
+        randomImage:"https://i.imgflip.com/3si4.jpg",
+    })
+
+    const [allMemeImages , setAllMemeImages] = useState(memedata)
+   
+
+
     function getMemeImg(){
         
-        const memesArray = memedata.data.memes
+        const memesArray = allMemeImages.data.memes
         const randomNumber = Math.floor(Math.random() * memesArray.length);
-        setMemeImg( memesArray[randomNumber].url)
+        const url = memesArray[randomNumber].url
+        setMeme( prevMeme => ({
+            ...prevMeme,
+            randomImage: url
+
+        }))
            
     }
 
@@ -37,7 +52,7 @@ export default function Meme(){
             className="form__btn">New meme image 
             <Icon icon="clarity:picture-solid-badged" className='iconify'/></button>
         </div>
-            <img src={memeImg} alt="meme" className="memeImg"></img>
+            <img src={meme.randomImage} alt="meme" className="memeImg"></img>
     </div>
     )
 }
