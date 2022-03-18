@@ -29,19 +29,33 @@ export default function Meme(){
         }))
            
     }
-
-
+    function onChange (event){
+        const {name , value} = event.target
+        setMeme(prevMemeState => {
+            return {
+                ...prevMemeState,
+                [name]: value
+            }
+        })
+    }
+console.log(meme)
 
     return(
     <div className="meme__container">
         <div className="form">
           <div className="form__input-container">
             <input 
+                onChange={onChange}
+                name="topText"
+                value={meme.topText}
                 type="text" 
                 className="input" 
                 placeholder="Top text">
             </input>
             <input 
+                onChange={onChange}
+                value={meme.bottomText}
+                name="bottomText"
                 type="text"
                 className="input" 
                 placeholder="Bottom text">
