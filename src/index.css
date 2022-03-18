@@ -51,6 +51,8 @@ img{
 .meme__container{
   max-height: calc(100vh - 4rem);
   padding: 4rem 2.5rem 4rem 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .form{
   display: flex;
@@ -59,9 +61,12 @@ img{
   justify-content: center;
   gap: 1rem;
 }
+.form__input-container{
+  width: 100%;
+}
 .input{
   display: flex;
-  width: 16rem;
+  width: 100%;
   height: 2rem;
   border: 1px solid #D5D4D8;
   border-radius: 5px;
@@ -75,7 +80,7 @@ img{
   font-weight: 700;
   font-size: 1rem;
   height: 2.5rem;
-  width: 16rem;
+  width: 100%;
   border: none;
   border: 1px solid #D5D4D8;
   border-radius: 5px;
@@ -100,7 +105,7 @@ img{
   margin: 0 auto;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  height: 30rem;
+  /* height: 30rem; */
   max-width: 100%;
   object-fit: contain;
 }
