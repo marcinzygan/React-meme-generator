@@ -43,7 +43,7 @@ export default function Meme(){
             }
         })
     }
-console.log(meme)
+
 
     return(
     <div className="meme__container">
