@@ -7,8 +7,8 @@ export default function Meme(){
    
     // const [memeImg , setMemeImg] = useState("https://i.imgflip.com/3si4.jpg")
     const [meme , setMeme] = useState ({
-        topText:"",
-        bottomText:"",
+        topText:"Shut up",
+        bottomText:"And take my money",
         randomImage:"https://i.imgflip.com/3si4.jpg",
     })
 
@@ -28,8 +28,9 @@ export default function Meme(){
         const url = memesArray[randomNumber].url
         setMeme( prevMeme => ({
             ...prevMeme,
-            randomImage: url
-
+            randomImage: url,
+            topText:"",
+            bottomText:"",
         }))
            
     }

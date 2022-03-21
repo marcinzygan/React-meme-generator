@@ -2,7 +2,8 @@
 
 - This is my meme generator project. 
 - Made in React.js while learning . March/2022
-- This project is live  >>> <a href="" >HERE</a> <<<
+- In this project I've learned props , useState , controlled inputs , useEffect , fetch Api.
+- This project is live  >>> <a href="https://mz-react-meme-generator.netlify.app" >HERE</a> <<<
 
 - Have a nice day 🌞
 
