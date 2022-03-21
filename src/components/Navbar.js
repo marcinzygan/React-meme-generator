@@ -7,7 +7,7 @@ return(
         <img src={logo} alt="troll face" className="logo"></img>
         <p className="header__txtl">Meme Generator</p>
         </div>
-        <p className="header__txtr">React Course - Project</p>
+        <p className="header__txtr">built in React</p>
 
     </header>
 )
