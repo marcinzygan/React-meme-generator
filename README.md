@@ -13,4 +13,4 @@
   <img src= "https://raw.githubusercontent.com/marcinzygan/React-meme-generator/master/src/images/meme.jpg" >
 </p>
 
-- 📫 Find me on marcin-zygan.com
+- 📫 Find me on <a href="https://marcin-zygan.com">marcin-zygan.com</a>
